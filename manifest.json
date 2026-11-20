@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.jasoncromwell.headset-battery",
+  "name": "Headset Battery",
+  "version": "1.0.0",
+  "author": "Jason Cromwell",
+  "license": "MIT",
+  "description": "Wireless headset battery level in the bar, with a panel showing charge, volume, mic and device details. Works with any headset UPower can see.",
+  "homepage": "https://github.com/jasoncromwell/omarchy-headset-battery",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Headset Battery",
+    "description": "Wireless headset battery level and details",
+    "category": "Audio",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "lowThreshold": 15,
+      "holdLevelWhileCharging": true
+    },
+    "schema": [
+      {
+        "key": "lowThreshold",
+        "type": "integer",
+        "label": "Low battery warning (%)",
+        "description": "On battery, the widget turns the warning color at or below this level.",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "defaultValue": 15
+      },
+      {
+        "key": "holdLevelWhileCharging",
+        "type": "boolean",
+        "label": "Hold last level while charging",
+        "description": "Some headsets, such as the Corsair Void series, report a false level while plugged in. When on, the widget shows the last reading taken on battery until you unplug.",
+        "defaultValue": true
+      }
+    ]
+  }
+}
