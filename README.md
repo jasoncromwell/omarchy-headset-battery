@@ -43,15 +43,6 @@ The widget appears in the right section of the bar. To move it, for example next
 omarchy bar move io.github.jasoncromwell.headset-battery --before omarchy.audio
 ```
 
-### Manual install
-
-```sh
-git clone https://github.com/jasoncromwell/omarchy-headset-battery \
-  ~/.config/omarchy/plugins/io.github.jasoncromwell.headset-battery
-omarchy-shell shell rescanPlugins
-omarchy plugin enable io.github.jasoncromwell.headset-battery
-```
-
 ## Update
 
 ```sh
